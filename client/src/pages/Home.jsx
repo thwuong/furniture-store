@@ -1,8 +1,10 @@
-import Slide from "../components/Slide";
+import SliderPage from "../components/Slide";
+import ProductList from "../components/ProductList";
 const Home = () => {
   return (
     <div className="mt-4">
-      <Slide />
+      <SliderPage />
+      <ProductList />
     </div>
   );
 };
