@@ -105,12 +105,13 @@ const Header = () => {
             </span>
           </li>
           <li className="header__nav-item relative cursor-pointer text-base font-medium">
-            <span
+            <Link
+              to={"/products"}
               className="header__nav-link flex items-center hover:text-[#B49149] peer"
               title="SẢN PHẨM"
             >
               SẢN PHẨM <MdOutlineArrowDropDown className="text-lg " />
-            </span>
+            </Link>
             <ul
               className="header__subnav duration-300 invisible opacity-0 -translate-y-0 peer-hover:visible peer-hover:opacity-100
              peer-hover:translate-y-6 hover:visible hover:opacity-100 hover:translate-y-6 absolute left-0 bg-white w-[280px] border-t-4 border-t-[#b18a3b] pt-6 pl-6

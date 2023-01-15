@@ -4,6 +4,7 @@ import {
   MdPhone,
   MdPrint,
   MdFacebook,
+  MdSend,
 } from "react-icons/md";
 const Footer = () => {
   return (
@@ -71,26 +72,51 @@ const Footer = () => {
           </div>
           <div>
             <h5 className="font-bold text-white mb-4">ĐĂNG KÝ NHẬN MAIL</h5>
-            <div className="my-8">
+            <div className="my-8 relative">
               <input
                 type="email"
-                className="w-full outline-none border-b border-gray-300 bg-transparent text-sm text-gray-400 p-2"
-                placeholder="Nhập email của bạn"
+                className="w-full z-10 peer duration-300 ease-linear outline-none border-b focus:border-[#B49149] border-gray-300 bg-transparent text-sm text-gray-400 p-2"
                 name="email"
+                placeholder="Nhập email của bạn"
               />
+              <button className="absolute right-2 top-2 duration-300 ease-linear hidden peer-focus:block">
+                <MdSend className="text-primary text-lg" />
+              </button>
             </div>
             <span className="text-sm text-gray-400">
               Hãy nhập email của bạn vào đây để nhận tin!
             </span>
+            <ul className="flex gap-3 mt-4">
+              <li className="text-white cursor-pointer text-lg rounded-full p-2 duration-300 ease-linear bg-transparent border hover:bg-primary">
+                <span>
+                  <MdFacebook />
+                </span>
+              </li>
+              <li className="text-white cursor-pointer text-lg rounded-full p-2 duration-300 ease-linear bg-transparent border hover:bg-primary">
+                <span>
+                  <MdFacebook />
+                </span>
+              </li>
+              <li className="text-white cursor-pointer text-lg rounded-full p-2 duration-300 ease-linear bg-transparent border hover:bg-primary">
+                <span>
+                  <MdFacebook />
+                </span>
+              </li>
+            </ul>
           </div>
           <div>
-            <h5 className="font-bold text-white mb-4">ĐĂNG KÝ NHẬN MAIL</h5>
+            <h5 className="font-bold text-white mb-4">KẾT NỐI VỚI CHÚNG TÔI</h5>
             <div className="mt-4">
-              <input
-                type="email"
-                className="w-full outline-none border-b border-gray-300 bg-transparent text-sm text-gray-400 p-2"
-                placeholder="Nhập email của bạn"
-              />
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="340"
+                height="130"
+                className="border-none overflow-hidden"
+                scrolling="no"
+                frameBorder={0}
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              ></iframe>
             </div>
           </div>
         </div>
