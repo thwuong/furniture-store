@@ -27,11 +27,28 @@ const Header = () => {
               <li className="header__control flex items-center cursor-pointer">
                 <MdPhone /> 0794290085
               </li>
-              <li className="flex items-center gap-1 rounded bg-gray-400/50 p-1">
-                <figure className="w-8 h-8 rounded-full overflow-hidden">
+              <li className="relative flex items-center gap-1 rounded p-1 group">
+                <figure className="w-6 h-6 rounded-full overflow-hidden">
                   <img src={srcItem} alt="" />
                 </figure>
-                <span className="text-sm font-light">Duong Thuong</span>
+                <span className="text-sm cursor-pointer font-light hover:text-black/70">
+                  Duong Thuong
+                </span>
+                <ul className="absolute w-[160px] top-8 right-0 duration-300 opacity-0 invisible group-hover:visible group-hover:opacity-100 text-left bg-primary  py-2 z-10 text-white">
+                  <li className="mt-3 ml-3 hover:text-white/70">
+                    <Link to={"/user/profile"}>
+                      <span>Tài khoản của tôi</span>
+                    </Link>
+                  </li>
+                  <li className="mt-3 ml-3 hover:text-white/70">
+                    <Link to={"/user/purchase"}>
+                      <span>Đơn mua</span>
+                    </Link>
+                  </li>
+                  <li className="mt-3 ml-3 hover:text-white/70">
+                    <span>Đăng xuất</span>
+                  </li>
+                </ul>
               </li>
               <li className="header__control cursor-pointer">
                 <Link to={"/signup"}>
